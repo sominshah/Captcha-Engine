@@ -1,0 +1,70 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TestCase</title>
+<script type="text/javascript">
+	function ramu(f)
+	{
+		var nn=f.nm.value;
+		if(nn.length==0)
+		{
+			alert('Name required');
+			f.nm.focus();
+			return false;
+		}
+		var v='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .';
+		var e=0;
+		while(e<nn.length)
+		{
+			if(v.indexOf(nn.charAt(e))==-1)
+			{
+				document.getElementById("nameErrorSection").innerHTML="Invalid data in name";
+				f.nm.focus();
+				return false;
+			}
+			e++;
+		}
+		
+		return true;
+	}
+
+</script>
+</head>
+<body>
+<center>
+	<h2>Personal Information</h2>
+	<form action="/TestCase/aaa" onsubmit='return ramu(this)'>
+		<table border="1">
+			<tr>
+				<td>
+					Name
+				</td>
+				<td> 
+					<input type="text" name="nm" id='nm'>
+					<span id='nameErrorSection'></span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+				<img src='/TestCase/captcha'>
+				</td>
+				<td colspan="2" align="center">
+				<input id='captcha' name='captcha' type="text">
+				</td>
+			</tr>
+
+
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value='Next'>
+				</td>
+			</tr>
+
+
+		</table>
+	</form>
+</center>
+</body>
+</html>
