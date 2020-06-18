@@ -2,14 +2,14 @@ package servlets;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-import captcha.engine.version.one.pojo.*;
+import captcha.engine.version.one.pojo.*;  // package is avilable in the jar (../WEB-INF/lib/ *.jar)
 public class aaa extends HttpServlet
 {
 public void doGet(HttpServletRequest rq,HttpServletResponse rs)
 {
 try
 {
-Captcha captcha=(Captcha) rq.getSession().getAttribute("Captcha");
+Captcha captcha=(Captcha) rq.getSession().getAttribute("Captcha"); // getting the captcha object to call isValid for the validation.
 System.out.println("Captcha Name: "+captcha.getName());
 System.out.println("Captcha Value: "+captcha.getValue());
 System.out.println("Request arrived");
