@@ -37,7 +37,9 @@
 
      <servlet>
       <servlet-name>CaptchaEngine</servlet-name>
-      <servlet-class>captcha.engine.version.one.web.CaptchaEngineWeb</servlet-class>
+      <servlet-class>captcha.engine.version.one.web.CaptchaEngineWeb</servlet-class> <!-- this is the captcha engine's servlet class -->
+
+	     <!-- You can change or remove all the param-value as per your need. -->
 	
 	<init-param>
 		<param-name>CaptchaHeight</param-name>
@@ -55,11 +57,13 @@
     	
 	<init-param>
 	<param-name>BackgroundColor</param-name>
-		<param-value>Green</param-value>
+		<param-value>Green</param-value>  <!-- Other colors are also avilable like BLUE, WHITE, GREEN, BLACK, CYAN, DARK_GRAY, GRAY, LIGHT_GRAY, MAGENTA, PINK, 
+							                                   RED, YELLOW, ORANGE -->
     	</init-param>
 	<init-param>
 	<param-name>FontColor</param-name>
-		<param-value>Black</param-value>
+		<param-value>Black</param-value> <!-- Other colors are also avilable like BLUE, WHITE, GREEN, BLACK, CYAN, DARK_GRAY, GRAY, LIGHT_GRAY, MAGENTA, PINK, 
+							                                   RED, YELLOW, ORANGE -->
     	</init-param>
 	</servlet>
 
